@@ -11,10 +11,13 @@ int main(int argc, char const *argv[])
         sleep(1);
         printf("Soy el hijo\n");
     }else{
+        int estado;
         printf("Soy el padre\n");
-        wait(NULL);
+        wait(&estado);
+        printf("El hijo a acabado con codigo de retorno: %d\n",
+        WEXITSTATUS(estado));
     }
     printf("hola soy %d\n", getpid());
 
-    return 0;
+    return 2;
 }
