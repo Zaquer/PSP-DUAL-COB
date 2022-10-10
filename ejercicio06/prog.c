@@ -25,7 +25,7 @@ int main(int argc, char const *argv[])
         pid_t hijoTerminado;
         int estado;
         hijoTerminado=wait(&estado);
-        prinf("el hijo %d ha terminado con estado: \n",hijoTerminado,WEXITSTATUS(estado));
+        //prinf("el hijo %d ha terminado con estado:%d \n",hijoTerminado,WEXITSTATUS(estado));
 
     }
     return 0;
